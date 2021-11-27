@@ -1,0 +1,58 @@
+
+<mat-toolbar class="mat-elevation-z8">
+    
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened">
+          menu
+      </mat-icon>
+      <mat-icon *ngIf="sidenav.opened">
+          close
+      </mat-icon>
+  </button>
+  WareShop
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+     <samp>Home</samp>
+      <mat-divider></mat-divider>
+
+      <button routerLink="/cooler"  mat-button class="menu-button" >
+          <span>Cooler</span>
+      </button>
+      <button routerLink="/fonte" mat-button class="menu-button">
+          <span>Fonte</span>
+      </button>
+      <button routerLink="/gabinete" mat-button class="menu-button">
+          <span>Gabinete</span>
+      </button>
+      <button routerLink="/hd" mat-button class="menu-button">
+        <span>HD</span>
+    </button>
+    <button routerLink="/monitor" mat-button class="menu-button">
+        <span>Monitor</span>
+    </button>
+    <button routerLink="/placa-mae" mat-button class="menu-button">
+        <span>Placa-Mãe</span>
+    </button>
+    <button routerLink="/placa-video" mat-button class="menu-button">
+        <span>Placa de video</span>
+    </button>
+    <button routerLink="/processador" mat-button class="menu-button">
+        <span >Processador</span>
+    </button>
+    <button routerLink="/ram" mat-button class="menu-button">
+        <span>Memoria RAM</span>
+    </button>
+    <button routerLink="/ssd" mat-button class="menu-button">
+        <span>SSD</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      
+            <router-outlet></router-outlet>
+         
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
